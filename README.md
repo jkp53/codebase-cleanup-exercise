@@ -51,3 +51,8 @@ Run the inventory report:
 ```sh
 python app/groceries.py
 ```
+
+Pull the crypto data:
+```sh
+python app/crypto.py
+```
