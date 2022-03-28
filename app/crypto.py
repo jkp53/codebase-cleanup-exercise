@@ -10,7 +10,9 @@ import requests
 
 load_dotenv()
 
-ALPHAVANTAGE_API_KEY = os.getenv("ALPHAVANTAGE_API_KEY", default="demo")
+from app.utils import to_usd
+
+ALPHAVANTAGE_API_KEY = os.getenv("ALPHAVANTAGE_API_KEY",default="demo")
 
 symbol = input("Please input a crypto symbol (default: 'BTC'): ") or "BTC"
 url = f"https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&market=USD&symbol={symbol}&apikey={ALPHAVANTAGE_API_KEY}"
@@ -30,4 +32,4 @@ latest = tsd[latest_date]
 print(symbol)
 print(latest_date)
 print(latest['4a. close (USD)'])
-print('${:,.2f}'.format(float(latest['4a. close (USD)'])))
+print(to_usd(float(latest['4a. close (USD)'])))
