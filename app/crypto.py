@@ -10,6 +10,8 @@ import requests
 
 load_dotenv()
 
+from app.utils import to_usd
+
 ALPHAVANTAGE_API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
 
 symbol = input("Please input a crypto symbol (default: 'BTC'): ") or "BTC"
@@ -30,4 +32,4 @@ latest = tsd[latest_date]
 print(symbol)
 print(latest_date)
 print(latest['4a. close (USD)'])
-print('${:,.2f}'.format(float(latest['4a. close (USD)'])))
+print(to_usd(float(latest['4a. close (USD)'])))

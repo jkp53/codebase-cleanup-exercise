@@ -49,10 +49,15 @@ python app/game.py
 Run the inventory report:
 
 ```sh
-python app/groceries.py
+python -m app.groceries
 ```
 
-Pull the crypto data:
+Pull stock data:
 ```sh
-python app/crypto.py
+python app/stocks.py
+```
+
+Pull  crypto data:
+```sh
+python -m app.crypto
 ```
