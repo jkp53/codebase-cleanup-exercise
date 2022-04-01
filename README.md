@@ -54,7 +54,7 @@ python -m app.groceries
 
 Pull stock data:
 ```sh
-python app/stocks.py
+python -m app.stocks
 ```
 
 Pull  crypto data:
