@@ -61,3 +61,8 @@ Pull  crypto data:
 ```sh
 python -m app.crypto
 ```
+## Testing
+To automatically test whether your functions are running as intended with the desired outcomes:
+```sh
+pytest
+```
