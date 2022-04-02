@@ -13,6 +13,6 @@ def to_usd(my_price):
 
 
 if __name__ =="__main__":
-    price=input("PLease choose a price like 4.9999: ")
+    price=input("Please choose a price like 4.9999: ")
 
     print(to_usd(float(price)))
